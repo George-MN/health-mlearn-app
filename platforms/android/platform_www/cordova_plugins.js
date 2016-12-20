@@ -540,7 +540,7 @@ module.exports.metadata =
     "cordova-plugin-network-information": "1.3.1-dev",
     "cordova-plugin-splashscreen": "4.0.1-dev",
     "cordova-plugin-console": "1.0.5-dev",
-    "cordova-plugin-whitelist": "1.2.2"
+    "cordova-plugin-whitelist": "1.3.1"
 };
 // BOTTOM OF METADATA
 });

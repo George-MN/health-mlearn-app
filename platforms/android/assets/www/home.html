@@ -154,6 +154,33 @@
             </div>
          </div>
       </div>
+       <script src="./js/jquery.min.js"></script> 
+      <script src="./js/custom.js"></script> 
+      <script src="./js/bootstrap.min.js"></script>
+      <script>
+        $(document ).ready(function() {
+         var email= localStorage.email;
+
+         var requestid= $.ajax({
+
+              type: 'post',
+              url: 'http://192.168.43.85/learn/resource/getid.php',
+              data: {email: email, rqstFunction: 'get_topics'},
+              crossDomain: true,
+              cache: false,
+              beforeSend: function(){ $("#login").html('Connecting...');}
+         });
+         requestid.done(function(responseStr)
+                {
+                    var responseObj = $.parseJSON(responseStr);
+                    alert(responseObj[0]['coursename']);
+                    // $('#duration').val(responseObj[0]['duration']);
+                    // $('#category').val(responseObj[0]['coursetype']);
+
+                });
+
+        });
+      </script>
       <script src="./js/jquery.min.js"></script> 
       <script src="./js/custom.js"></script> 
       <script src="./js/bootstrap.min.js"></script>
